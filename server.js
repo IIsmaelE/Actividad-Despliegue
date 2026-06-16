@@ -5,6 +5,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname));
 
 // 1. Conexión a la Base de Datos NoSQL
 require('dotenv').config();
