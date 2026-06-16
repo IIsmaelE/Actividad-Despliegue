@@ -4,7 +4,7 @@ boton.addEventListener('click', async () => {
     try {
         
 // Petición al servidor (Back-end)
-const respuesta = await fetch('http://localhost:3000/datos');
+const respuesta = await fetch('/datos');
 const datos = await respuesta.json();
 
 const contenedor = document.getElementById('contenedor-datos');
@@ -48,7 +48,7 @@ if (!nombre || !genero || !productora || !anio || !estado) return alert("Complet
 const datosAEnviar = { nombre, genero, productora, anio, estado };
 
 try {
-const respuesta = await fetch('http://localhost:3000/guardar', {
+const respuesta = await fetch('/guardar', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify(datosAEnviar)
@@ -65,7 +65,7 @@ console.error("Error al enviar datos:", error);
 async function eliminarUsuario(id) {
 if (confirm("¿Estás seguro de eliminar este registro NoSQL?")) {
 try {
-const respuesta = await fetch(`http://localhost:3000/eliminar/${id}`, {
+const respuesta = await fetch(`/eliminar/${id}`, {
 method: 'DELETE'
 });
 
@@ -86,7 +86,7 @@ btnBuscar.addEventListener('click', async () => {
 const termino = document.getElementById('input-buscar').value;
 if (!termino) return alert("Ingresa un término de búsqueda");
 try {
-const respuesta = await fetch(`http://localhost:3000/buscar/${termino}`);
+const respuesta = await fetch(`/buscar/${termino}`);
 const resultados = await respuesta.json();
 
 const contenedor = document.getElementById('contenedor-datos');
@@ -137,10 +137,15 @@ const titulo = prompt("Nuevo título:");
 if(!titulo) return;
 const genero = prompt("Nuevo género:");
 if(!genero) return;
+
+const productora = prompt("Nueva Productora:");
+if(!productora) return;
+
+const anio = prompt("Nuevo anio:");
+if(!anio) return;
+
 try{
-const respuesta = await fetch(
-`http://localhost:3000/editar/${id}`,
-{
+const respuesta = await fetch(`/editar/${id}`, {
 method:'PUT',
 headers:{
 'Content-Type':'application/json'
