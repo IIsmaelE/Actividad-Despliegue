@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>🎬Peliculas Chidas🎬</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>🎬Gestor de Peliculas🎬</h1>
+<div id="contenedor-datos">
+<p>Cargando datos de la base de datos...</p>
+</div>
+
+<div id="busqueda">
+<h3> Buscar en la Base de Datos</h3>
+<input type="text" id="input-buscar" placeholder="Escribe un nombre o rol...">
+<button id="btn-buscar">Buscar</button>
+<button id="btn-limpiar">Limpiar búsqueda</button>
+</div>
+<hr>
+
+<div id="registro-usuario">
+<h2>🍿Registrar Nueva Pelicula🍿</h2>
+<input type="text" id="nombre" placeholder="Título de la Pelicula">
+
+<input type="text" id="genero" placeholder="Género">
+<input type="text" id="productora" placeholder="Productora">
+<input type="number" id="anio" placeholder="Año">
+<select id="estado">
+<option value="true">Visto</option>
+<option value="false">No Visto</option>
+</select>   
+<button id="btn-guardar">Guardar Pelicula🍿</button>
+</div>
+<hr>
+<button id="btn-accion">Actualizar Vista</button>
+<script src="script.js"></script>
+</body>
+</html> 

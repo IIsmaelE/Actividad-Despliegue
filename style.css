@@ -1,0 +1,109 @@
+CSS
+body{
+    font-family: Arial, sans-serif;
+    background: #141414;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    color: #ffd900cf;
+    font-size: 3rem;
+    text-shadow: 3px 3px 10px #000;
+}
+
+.subtitulo{
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+#contenedor-datos{
+    width: 80%;
+    margin: auto;
+}
+
+.tarjeta-usuario{
+    background: #1c1c1c;
+    color: white;
+    border-left: 5px solid #E50914;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform .2s;
+}
+
+.tarjeta-usuario:hover{
+    transform: scale(1.03);
+}
+
+#registro-usuario,
+#busqueda{
+    background: #1f1f1f;
+    border: 2px solid #333;
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#registro-usuario h2,
+#busqueda h3{
+    color: white;
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+button{
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #ff1f2f;
+}
+
+.btn-borrar{
+    background: #ff9800;
+}
+
+.btn-borrar:hover{
+    background: #ffb74d;
+}
+
+hr{
+    display:none;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.btn-editar{
+    background: #2196f3;
+    margin-right: 10px;
+}
+
+.btn-editar:hover{
+    background: #42a5f5;
+}
